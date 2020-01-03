@@ -1,6 +1,9 @@
-def calcDigest(pw,params):# dictionary keywords will be used to sort values. Only vals will be  concatinated then hashed with merchant password
+import hashlib, hmac, urllib
 
-    import hashlib, hmac, urllib
+
+def calcDigest(pw,params):
+    # dictionary keywords will be used to sort values. Only vals will be  concatinated then hashed with merchant password
+
     to_sign = ""
     params['result'] = 0
     for v in sorted(params.keys()):
